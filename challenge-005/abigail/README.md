@@ -17,4 +17,9 @@ We treat all characters as being separate. That is, `'Abo'` and
 
 Write a program to find the sequence of characters that has the most anagrams.
 
+### Note
+We treat all characters as being separate. That is, `'Abo'` and
+`'boa'` will not be considered to be anagrams from each other.
+
 ### Solutions
+* [Perl](perl/ch-2.pl)
