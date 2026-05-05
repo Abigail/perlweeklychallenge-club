@@ -30,14 +30,8 @@ while {[gets stdin line] >= 0} {
     #
     # Print the result
     #
-    puts -nonewline {"}
-    for {set index 0} {$index < [llength $line]} {incr index} {
-        puts -nonewline [lindex $line $index]
-        set times $per_gap
-        if {$index == [llength $line] - 1} {
-            set times $end
-        }
-        puts -nonewline [string repeat { } $times]
-    }
-    puts {"}
+    puts -nonewline  {"}
+    puts -nonewline [join $line [string repeat { } $per_gap]]
+    puts -nonewline             [string repeat { } $end]
+    puts             {"}
 }
