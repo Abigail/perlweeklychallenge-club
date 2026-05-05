@@ -16,9 +16,9 @@ for line in sys . stdin:
 
     #
     # Split into words. Since split keeps empty leading and trailing
-    # fields, we use filter to remove them
+    # fields, we first strip leading and trailing whitespace
     #
-    words   = list (filter (lambda w: len (w), re . split (r' +', line)))
+    words   = re . split (r' +', line . strip ())
 
     #
     # Number of gaps between the words

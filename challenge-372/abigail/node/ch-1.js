@@ -11,11 +11,11 @@
     //
     // Remove quotes, and split into words. When splitting,
     // Javascript retains empty leading/trailing fields, so 
-    // we need to filter them.
+    // we trim leading/trailing whitespace first
     //
     let words   = line  . replaceAll (/"/g, "")
-                        . split (/\s+/)
-                        . filter (x => x . length > 0)
+                        . trim       ()
+                        . split      (/\s+/)
     let gaps    = words . length - 1
 
     //
