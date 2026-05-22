@@ -7,7 +7,7 @@ do    max=0
           if   [[ ! -z ${copy// } ]]         # If we have any non spaces,
           then set $copy                     # Split on white space
                for seq in $*                 # Iterate over the chunks
-               do  if [[ $seq -gt $max ]]    # Keep track of the largest value
+               do  if   [[ $seq -gt $max ]]  # Keep track of the largest value
                    then max=$seq
                    fi
                done
