@@ -16,10 +16,9 @@ for line in sys . stdin:
         res = 1
 
     for num in numbers:
-        if num <= res:
-            if num == res:
-                res = res + 1
-            continue
-        break
+        if num == res:
+            res = res + 1
+        if num >  res:
+            break
 
     print (res)

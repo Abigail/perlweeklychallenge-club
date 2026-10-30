@@ -38,13 +38,12 @@ func main () {
         }
 
         for _, number := range (numbers) {
-            if number <= res {
-                if number == res {
-                    res ++
-                }
-                continue
+            if number == res {
+                res ++
             }
-            break
+            if number >  res {
+                break
+            }
         }
         fmt . Printf ("%d\n", res)
     }

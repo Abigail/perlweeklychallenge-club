@@ -71,13 +71,12 @@ int main (int argc, char ** argv) {
         long res = sum <= 0 ? 1 : 1 + sum / count;
 
         for (int i = 0; i < count; i ++) {
-            if (numbers [i] <= res) {
-                if (numbers [i] == res) {
-                    res ++;
-                }
-                continue;
+            if (numbers [i] == res) {
+                res ++;
             }
-            break;
+            if (numbers [i] >  res) {
+                break;
+            }
         }
 
         printf ("%ld\n", res);

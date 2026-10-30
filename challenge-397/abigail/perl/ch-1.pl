@@ -12,11 +12,8 @@ while (my $line = <>) {
        $sum += $_ for my @numbers = sort {$a <=> $b} split /\s+/ => $line;
     my $res  = $sum <= 0 ? 1 : 1 + int ($sum / @numbers);
     for my $num (@numbers) {
-        if ($num <= $res) {
-            $res ++ if $num == $res;
-            next;
-        }
-        last;
+        $res ++ if $num == $res;
+        last    if $num >  $res;
     }
     say $res;
 }
